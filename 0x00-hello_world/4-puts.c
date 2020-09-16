@@ -1,9 +1,6 @@
 #include<stdio.h>
 
-/*
-*prints exactly "P.., followed by a new line
-*end with the value 0
-*/
+/*Main function - Puts - function for output strings*/
 
 int main(void)
 {

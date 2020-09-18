@@ -15,11 +15,11 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
 if (n > 0)
-printf("%d is positiv", n);
+printf("%d is positiv\n", n);
 if (n == 0)
-printf("%d is zero", n);
+printf("%d is zero\n", n);
 if (n < 0)
-printf("%d is negativ", n);
+printf("%d is negativ\n", n);
 
 return (0);
 }

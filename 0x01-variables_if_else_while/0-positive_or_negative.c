@@ -5,7 +5,7 @@
 /**
  * main - Display sign of number n
  *
- * Return : 0 (Success)
+ * Return: 0 (Success)
  */
 int main(void)
 {

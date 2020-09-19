@@ -19,8 +19,6 @@ while (i < 10)
 	putchar(',');
 	putchar(' ');
 	}
-	else
-	putchar(' ');
 	i++;
 }
 return (0);

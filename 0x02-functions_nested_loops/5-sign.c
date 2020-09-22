@@ -2,7 +2,7 @@
 #include "holberton.h"
 
 /**
-*_print_sign - Function that prints the sign of a number
+*print_sign - Function that prints the sign of a number
 *@n: a number
 *
 *Return: 1 if n is positive, 0 if n is zero, -1 if n is negative

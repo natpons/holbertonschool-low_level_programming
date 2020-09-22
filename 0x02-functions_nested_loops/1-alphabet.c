@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <string.h>
 #include "holberton.h"
 
 /**
@@ -7,11 +5,11 @@
  *
  * Return: 0
  */
-int main(void)
+void print_alphabet(void)
 {
 	char ch = 'a';
 
-	while (ch < 'z')
+	while (ch <= 'z')
 	{
 		_putchar(ch);
 		ch++;

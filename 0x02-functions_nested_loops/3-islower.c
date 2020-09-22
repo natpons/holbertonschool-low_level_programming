@@ -9,8 +9,8 @@
 *Return: 1 if c is lowercase, o if isn't
 */
 
-int_islower(int c)
-{
+int _islower(int c)
+	{
 	if (c >= 'a' && c <= 'z')
 	{
 	return (1);

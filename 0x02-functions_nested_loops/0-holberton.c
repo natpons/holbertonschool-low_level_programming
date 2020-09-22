@@ -7,10 +7,10 @@
  *
  * Return: 0
  */
-int main(void);
+int main(void)
 {
-	unsigned short int a = 0;
 	char c[] = "Holberton\n";
+	unsigned int a = 0;
 	while (a < strlen(c))
 	{
 		_putchar(c[a]);

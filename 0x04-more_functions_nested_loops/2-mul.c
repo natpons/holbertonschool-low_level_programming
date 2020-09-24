@@ -2,14 +2,14 @@
 #include "holberton.h"
 
 /**
- * _mul - Multiplies two integers.
+ * mul - Multiplies two integers.
  * @a: first operand
  * @b: second operand
  *
- * Return: multiplication result
+ * Return: an int, multiplication result
  */
 
-int _mul(int a, int b)
+int mul(int a, int b)
 {
 	int res = a * b;
 

@@ -3,11 +3,11 @@
 #include "holberton.h"
 
 /**
-  *_isupper - Checks for uppercase character
-  *@c - a int
-  *
-  *Return: 1 if c is uppercase, o otherwise
-  */
+ * _isupper - Checks for uppercase character
+ * @c: a char
+ *
+ * Return: 1 if c is uppercase, o otherwise
+ */
 
 int _isupper(int c)
 	{

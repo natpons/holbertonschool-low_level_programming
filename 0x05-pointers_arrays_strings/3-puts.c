@@ -2,6 +2,7 @@
 
 /**
  * _puts - prints a string, followed by a new line to stdout
+ * @str: a variable is a pointer to a char type
  */
 void _puts(char *str)
 {

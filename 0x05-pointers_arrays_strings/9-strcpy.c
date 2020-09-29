@@ -22,7 +22,7 @@ int _strlen(char *s)
  * @dest: a string to copy
  * @src: a string for coping
  *
- * Return value: a string
+ * Return: a string
  */
 
 char *_strcpy(char *dest, char *src)

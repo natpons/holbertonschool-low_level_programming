@@ -27,14 +27,13 @@ int _strlen(char *s)
 
 char *_strcat(char *dest, char *src)
 {
-	
 	int num = _strlen(dest);
 	int i;
 
-	for (i = 0; i <= num; i++) 
+	for (i = 0; i <= num; i++)
 		dest[num + i] = src[i];
 
 	dest[num + i] = '\0';
-	
+
 	return (dest);
 }

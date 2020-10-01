@@ -18,9 +18,10 @@ int _strlen(char *s)
 }
 
 /**
- * *_strcpy - copies a string
+ * *_strncpy - copies a string
  * @dest: a string destination
  * @src: a string source
+ * @n: an int
  *
  * Return: a string
  */

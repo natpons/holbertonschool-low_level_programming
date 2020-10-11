@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "holberton.h" 
+#include "holberton.h"
 /**
  * main - adds positive numbers
  * @argc: argument count
- * @*argv: argument values
+ * @argv: argument values
  *
  * Return: print 0 - if no number + \n
- * print "Error and return 1": if 1 of the number contains symbols are not digits
+ * Error + return 1: if 1 of the number contains symbols are not digits
  */
 
 int main(int argc, char *argv[])
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		for (j = 0; argv[i][j] != '\0'; j++);
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
 
 		if ((argv[i][j] < '0') || (argv[i][j] > '9'))

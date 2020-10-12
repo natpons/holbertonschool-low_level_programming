@@ -12,8 +12,8 @@
 
 int main(int argc, char *argv[])
 {
-	int i, total = 0;
-	int num = 0;
+	int total;
+	int i, num = 0;
 	int coins[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
@@ -22,18 +22,20 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
+	total = atoi(argv[1]);
+
 	if (total < 0)
 	{
 		printf("0\n");
+		return (0);
 	}
 	
-	total = atoi(argv[1]);
-
 	while (total != 0)
 	{
 		num = num + (total / coins[i]);
 		total = total % coins[i];
 		i++;
 	}
-	return (num);
+	printf("%d\n", num);
+	return (0);
 }

@@ -14,8 +14,9 @@
 int main(int argc, char *argv[])
 {
 	int total;
-	int i, num = 0;
-	int coins[] = {25, 10, 5, 2, 1};
+	int i = 0;
+	int num = 0;
+	int coins[5] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
@@ -31,9 +32,9 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	while (total != 0)
+	while (total)
 	{
-		num = num + (total / coins[i]);
+		num += total / coins[i];
 		total = total % coins[i];
 		i++;
 	}

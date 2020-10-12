@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
- * main - prints the minimum number of coins to make change for an amount of money
+ * main - prints the minimum number of coins
+ * to make change for an amount of money
  * @argc: argument count
  * @argv: argument values
  *
@@ -29,7 +30,7 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	
+
 	while (total != 0)
 	{
 		num = num + (total / coins[i]);

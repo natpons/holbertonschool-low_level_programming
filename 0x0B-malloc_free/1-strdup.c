@@ -10,7 +10,7 @@
  */
 int _strlen(char *s)
 {
-	int len;
+	int len = 0;
 
 	while (s[len] != '\0')
 		len++;
@@ -29,7 +29,7 @@ int _strlen(char *s)
 char *_strdup(char *str)
 {
 	char *str2;
-	unsigned int i;
+	unsigned int i = 0;
 	unsigned int len;
 
 	if (str == NULL)
@@ -40,10 +40,11 @@ char *_strdup(char *str)
 	if (str2 == NULL)
 		return (NULL);
 
-	while(*str)
+	while(str[i])
 	{
 		str2[i] = str[i];
 		i++;
 	}
+	str2[i] = '\0';
 	return (str2);
 }

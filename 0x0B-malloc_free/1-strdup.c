@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * _strlen - returns the length of a string
@@ -28,14 +29,21 @@ int _strlen(char *s)
 char *_strdup(char *str)
 {
 	char *str2;
+	unsigned int i;
+	unsigned int len;
 
-	str2 = malloc(sizeof(char) * (_strlen(str) + 1));
+	if (str == NULL)
+			return (NULL);
 
-	if (str == 0)
-		return ('\0');
+	len = _strlen(str);
+	str2 = malloc(sizeof(char) * (len + 1));
+	if (str2 == NULL)
+		return (NULL);
 
 	while(*str)
-		*str2++ = *str++;
-
+	{
+		str2[i] = str[i];
+		i++;
+	}
 	return (str2);
 }

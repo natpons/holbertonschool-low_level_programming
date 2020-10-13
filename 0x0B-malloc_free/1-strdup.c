@@ -22,8 +22,8 @@ int _strlen(char *s)
  * *_strdup - returns a pointer to a newly allocated space in memory
  * which contains a copy of the string given as a parameter.
  * @str: string to duplicate
- * 
- * Return: a pointer to the duplicated string; NULL if str = NULL  
+ *
+ * Return: a pointer to the duplicated string; NULL if str = NULL
  */
 
 char *_strdup(char *str)
@@ -33,14 +33,14 @@ char *_strdup(char *str)
 	unsigned int len;
 
 	if (str == NULL)
-			return (NULL);
+		return (NULL);
 
 	len = _strlen(str);
 	str2 = malloc(sizeof(char) * (len + 1));
 	if (str2 == NULL)
 		return (NULL);
 
-	while(str[i])
+	while (str[i])
 	{
 		str2[i] = str[i];
 		i++;

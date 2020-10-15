@@ -11,7 +11,7 @@
 
 int _strlen(char *s)
 {
-	int len;
+	int len = 0;
 
 	while (s[len] != '\0')
 		len++;
@@ -50,12 +50,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		strnew[len1 + n] = '\0';
 		return (strnew);
 	}
-	else
-	{
-		for (i = 0; i < len2; i++)
-			strnew[len1 + i] = s2[i];
-		strnew[len1 + n] = '\0';
-		return (strnew);
-	}
 
+	for (i = 0; i < len2; i++)
+		strnew[len1 + i] = s2[i];
+	strnew[len1 + len2] = '\0';
+	return (strnew);
 }

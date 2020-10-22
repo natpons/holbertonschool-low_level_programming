@@ -1,7 +1,8 @@
 #include "3-calc.h"
+#include <stdio.h>
 
 /**
- * op_add - addition function 
+ * op_add - addition function
  * @a: first term
  * @b: second term
  *
@@ -26,8 +27,8 @@ int op_sub(int a, int b)
 
 /**
  * op_mul - multiplication function
- * a: first term
- * b: second term
+ * @a: first term
+ * @b: second term
  *
  * Return: returns the product of a and b
  */
@@ -38,8 +39,8 @@ int op_mul(int a, int b)
 
 /**
  * op_div - division function
- * a: first term
- * b: second term
+ * @a: first term
+ * @b: second term
  *
  * Return: the result of the division of a by b
  */
@@ -50,8 +51,8 @@ int op_div(int a, int b)
 
 /**
   * op_mod - division function
-  * a: first term
-  * b: second term
+  * @a: first term
+  * @b: second term
   *
   * Return: the remainder of the division of a by b
   */

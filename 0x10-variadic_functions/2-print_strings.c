@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdarg.h>
 #include "variadic_functions.h"
 
 /**
@@ -22,7 +20,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	/*access all the arguments assigned to valist*/
 	for (i = 0; i < n; i++)
 	{
-		/*casting the valist, the value*/ 
+		/*casting the valist, the value*/
 		result = va_arg(valist, char*);
 		if (result == NULL)
 			printf("nil");

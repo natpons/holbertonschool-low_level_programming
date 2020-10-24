@@ -8,6 +8,7 @@ void op_c(va_list ap)
 {
 	/*va_arg to access the item*/
 	int res = va_arg(ap, int);
+
 	printf("%c", res);
 }
 
@@ -18,6 +19,7 @@ void op_c(va_list ap)
 void op_i(va_list ap)
 {
 	int res = va_arg(ap, int);
+
 	printf("%d", res);
 }
 
@@ -28,6 +30,7 @@ void op_i(va_list ap)
 void op_f(va_list ap)
 {
 	double res = va_arg(ap, double);
+
 	printf("%f", res);
 }
 
@@ -38,6 +41,7 @@ void op_f(va_list ap)
 void op_cp(va_list ap)
 {
 	char *res = va_arg(ap, char *);
+
 	if (res == NULL)
 		res = "nil";
 	printf("%s", res);
@@ -46,8 +50,6 @@ void op_cp(va_list ap)
 /**
  * print_all - prints anything
  * @format: a list of types of arguments passed to the function
- * @n: the number of strings passed to the function
- *
  */
 void print_all(const char * const format, ...)
 {
@@ -56,7 +58,6 @@ void print_all(const char * const format, ...)
 
 	int i = 0;
 	int j;
-	char *sep = "";
 
 	type ops[] = {
 		{"c", op_c},
@@ -78,9 +79,8 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == *(ops[j].op))
 			{
-				printf("%s", sep);
-				sep = ", ";
 				ops[j].f(ap);
+				printf(", ");
 			}
 		j++;
 		}

@@ -58,6 +58,7 @@ void print_all(const char * const format, ...)
 
 	int i = 0;
 	int j;
+	char *sep = "";
 
 	type ops[] = {
 		{"c", op_c},
@@ -79,8 +80,9 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == *(ops[j].op))
 			{
+				printf("%s", sep);
+				sep = ", ";
 				ops[j].f(ap);
-				printf(", ");
 			}
 		j++;
 		}

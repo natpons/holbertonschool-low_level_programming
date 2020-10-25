@@ -23,10 +23,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		/*casting the valist, the value*/
 		result = va_arg(valist, char *);
 		if (result == NULL)
-			printf("(nil)");
+			result = "(nil)";
 		printf("%s", result);
 
-		if ((separator != 0) && (i < n - 1))
+		if ((separator != 0) && i < (n - 1))
 			printf("%s", separator);
 	}
 	/*clean memory reserved for valist*/

@@ -21,9 +21,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		/*casting the valist, the value*/
-		result = va_arg(valist, char*);
+		result = va_arg(valist, char *);
 		if (result == NULL)
-			printf("nil");
+			printf("(nil)");
 		printf("%s", result);
 
 		if ((separator != 0) && (i < n - 1))

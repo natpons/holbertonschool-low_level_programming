@@ -72,7 +72,7 @@ void print_all(const char * const format, ...)
 	va_start(ap, format);
 
 	/*while input char string*/
-	while (format && format[i])
+	while ((format != NULL) && format[i])
 	{
 		j = 0;
 		/*while ops chars*/

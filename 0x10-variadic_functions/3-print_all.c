@@ -43,7 +43,7 @@ void op_cp(va_list ap)
 	char *res = va_arg(ap, char *);
 
 	if (res == NULL)
-		res = "nil";
+		res = "(nil)";
 	printf("%s", res);
 }
 

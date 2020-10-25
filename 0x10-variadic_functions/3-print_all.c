@@ -90,6 +90,6 @@ void print_all(const char * const format, ...)
 	}
 
 	/*clean memory reserved for valist*/
-	va_end(ap);
 	printf("\n");
+	va_end(ap);
 }

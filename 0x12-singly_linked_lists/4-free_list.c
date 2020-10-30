@@ -20,5 +20,4 @@ void free_list(list_t *head)
 		/*ptr will points to the next node*/
 		ptr = hold;
 	}
-	free(head);
 }

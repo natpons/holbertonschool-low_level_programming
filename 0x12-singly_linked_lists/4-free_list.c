@@ -12,8 +12,13 @@ void free_list(list_t *head)
 
 	while (ptr != NULL)
 	{
+		/*before deleting the node we store the adress of the next*/
 		hold = ptr->next;
+		/*delete the node*/
+		free(ptr->str);
 		free(ptr);
+		/*ptr will points to the next node*/
 		ptr = hold;
 	}
+	free(head);
 }

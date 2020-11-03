@@ -11,6 +11,9 @@ void free_listint2(listint_t **head)
 
 	ptr = *head;
 
+	if (head == NULL)
+		return;
+
 	while (ptr != NULL)
 	{
 		/*before deleting the node we store the adress of the next*/
@@ -20,5 +23,5 @@ void free_listint2(listint_t **head)
 		/*ptr will points to the next node*/
 		ptr = hold;
 	}
-	*head = NULL;
+	head = NULL;
 }

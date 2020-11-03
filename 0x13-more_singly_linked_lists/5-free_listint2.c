@@ -7,21 +7,17 @@
  */
 void free_listint2(listint_t **head)
 {
-	listint_t *ptr, *hold;
+	listint_t *tmp;
 
-	ptr = *head;
-
+	/*there is no linked list*/
 	if (head == NULL)
 		return;
 
-	while (ptr != NULL)
+	while (*head != NULL)
 	{
-		/*before deleting the node we store the adress of the next*/
-		hold = ptr->next;
-		/*delete the node*/
-		free(ptr);
-		/*ptr will points to the next node*/
-		ptr = hold;
+		tmp = (*head)->next; /*change the position before deleting*/
+		free(*head); /*deleting a node*/
+		(*head) = tmp; /*new head*/
 	}
 	head = NULL;
 }

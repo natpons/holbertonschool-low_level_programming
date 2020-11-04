@@ -7,45 +7,45 @@
  * @n: a new node
  *
  * Return: the address of the new node, or NULL if it failed
- * if it is not possible to add the new node at index idx,
- * do not add the new node and return NULL
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	unsigned int i = 1;
-	listint_t *temp, *store_next, *new_node;
+	unsigned int i = 0;
+	listint_t *temp, *hold, *newnode;
 
 	if (head == NULL)
 		return (0);
-
-
-	if (idx == 0)
+	newnode = malloc(sizeof(listint_t)); /*for all cases*/
+	if (newnode == NULL)
+		return (NULL);
+	newnode->n = n;
+	if (idx == 0) /*1. add a node at the beginning of the list*/
 	{
-		temp = malloc(sizeof(listint_t));
-		if (temp == NULL)
-			return (NULL);
-		temp->n = n;
-		temp->next = *head;
-		*head = temp;
-		return (temp);
+		newnode->next = *head;
+		*head = newnode;
+		return (newnode);
 	}
-
-	idx = 1;
-
-	while (*head != NULL)
+	temp = *head; /*init temp*/
+	/* 2. go through the list till idx*/
+	while (temp != 0)
 	{
-		/* go through the list till idx*/
-		while (i != idx)
+		if (i == idx)
 		{
-			i++;
-			temp = temp->next;
+			hold->next = newnode; /*insert*/
+			newnode->next = temp; /*connect*/
+			return (newnode);
 		}
-
-		store_next = temp->next; /*to store the adr the next node*/
-		temp->next = new_node; /*point to the new_node*/
-		temp->n = n;
-		new_node->next = store_next;
-		return (temp);
+		hold = temp; /*pointer to a previous node*/
+		temp = temp->next; /*pointer to the next node*/
+		i++;
 	}
+	/*3. add a newnode at the end of the list*/
+	if (i == idx)
+	{
+		temp->next = newnode;
+		newnode->next = NULL;
+		return (newnode);
+	}
+	free(newnode);
 	return (NULL);
 }

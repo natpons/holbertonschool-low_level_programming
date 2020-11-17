@@ -57,24 +57,22 @@ int main(void)
 	list_t *new;
 	size_t n;
 	char *path, *folder;
-
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
+	{
+		printf("Error\n");
+		return (1);
+	}
 	printf("%s\n", _getenv("PATH"));
 	path = _getenv("PATH");
 	folder = strtok(path, ":");
-	strcpy(new->str, strdup(folder));/*?*/
-	
 	while(folder != NULL)
 	{
-		/*strcpy(new->next, strdup(folder));*/
+		new->str = folder;
+		new->next = NULL;
+		n = print_folder(new);
+		printf("-> %lu elements\n", n);
 		folder = strtok(NULL, ":");
-	}  
-
-	n = print_folder(new);
-	printf("-> %lu elements\n", n);
-
-	printf("\n");
-	n = print_folder(new);
-	printf("-> %lu elements\n", n);
-
+	}
 	return (0);
 }

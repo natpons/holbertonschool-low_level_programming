@@ -34,6 +34,7 @@ char *_getenv(const char *name)
 	return (NULL);
 }
 
+/*prints all elements of a linked list*/
 size_t print_folder(const list_t *head)
 {
 	size_t nodes = 0;
@@ -57,6 +58,7 @@ int main(void)
 	list_t *new;
 	size_t n;
 	char *path, *folder;
+
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
 	{
@@ -66,6 +68,7 @@ int main(void)
 	printf("%s\n", _getenv("PATH"));
 	path = _getenv("PATH");
 	folder = strtok(path, ":");
+	
 	while(folder != NULL)
 	{
 		new->str = folder;
@@ -74,5 +77,6 @@ int main(void)
 		printf("-> %lu elements\n", n);
 		folder = strtok(NULL, ":");
 	}
+	free(new);
 	return (0);
 }

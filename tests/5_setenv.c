@@ -35,7 +35,7 @@ size_t print_folder(const list_t *head)
 
 /**
  * _getenv - gets an environment variable
- * ex:HOME=/home/vagrant, get value after =
+ * ex:HOME=/home/vagrant, gets value after =
  * @name: name of the variable user enter
  */
 char *_getenv(const char *name)
@@ -69,16 +69,17 @@ char *_getenv(const char *name)
  */
 int _setenv(const char *name, const char *value, int overwrite)
 {
-	char *set, *folder;
-	list_t *endnode, **head;
-	/*a new pointer temp which position we will advance to the last node*/
-	list_t *temp;
+	char *set/*, *folder*/;
+	/*list_t *endnode, **head;
+	a new pointer temp which position we will advance to the last node*
+	list_t *temp;*/
 	int i = 0;
 	char *newname;
-	// realloc                                                                                                  
-
+	                                                                             
 	newname = strdup(name);
 	set = _getenv(name);
+
+	/*if name does not exist*/
 	if (set == NULL)
 	{
 		while(environ[i] != '\0')
@@ -94,7 +95,21 @@ int _setenv(const char *name, const char *value, int overwrite)
 		}
 	}
 	else
+	/*name is exist*/
 	{
+		if (overwrite != 0)
+		{
+			i = 0;
+			value = (char*) realloc (newname, sizeof(char) * strlen(value));
+			for (i = 0; environ[i] != NULL; i++)
+			{
+				if (environ[i] == )
+				{
+
+				}
+			}
+
+		}
 	}
 	return (0);
 }
@@ -102,4 +117,6 @@ void main()
 {
 	_setenv("HELLO", "HELLO WORLD", 1);
 	printf("%s\n",_getenv("HELLO"));
+	_setenv("HOME", "WORLD", 1);
+	printf("%s\n",_getenv("HOME"));
 }

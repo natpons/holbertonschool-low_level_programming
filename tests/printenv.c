@@ -1,4 +1,8 @@
 #include <stdio.h>
+/**
+ * prints the environment using the lobal variable environ
+ * 
+ */
 extern char** environ;
 
 int main(void) {

@@ -23,7 +23,6 @@ char *_getenv(const char *name)
 		/*compare two strings*/
 		if (strcmp(name, value) == 0)
 		{
-			free(value);
 			return (strtok(NULL, "="));
 		}
 		free(environ_string);

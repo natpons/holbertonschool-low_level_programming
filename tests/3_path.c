@@ -4,6 +4,11 @@
 
 extern char **environ;
 
+/**
+ * _getenv - gets an environment variable
+ * ex:HOME=/home/vagrant, get value after =
+ * @name: name of the variable user enter
+ */
 char *_getenv(const char *name)
 {
 	char *environ_string;
@@ -27,7 +32,10 @@ char *_getenv(const char *name)
 	}
 	return (NULL);
 }
-
+/**
+ * prints each directory contained in the env variable PATH
+ * one directory per line
+ */
 int main(void)
 {
 	char *folder;

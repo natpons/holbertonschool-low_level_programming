@@ -10,6 +10,11 @@ char *_getenv(const char *name);
 list_t *folder(list_t **head, const char *str);
 extern char **environ;
 
+/**
+ * _getenv - gets an environment variable
+ * ex:HOME=/home/vagrant, get value after =
+ * @name: name of the variable user enter
+ */
 char *_getenv(const char *name)
 {
 	char *environ_string;
@@ -34,7 +39,10 @@ char *_getenv(const char *name)
 	return (NULL);
 }
 
-/*prints all elements of a linked list*/
+/**
+ * print_folder - builds a linked listof the PATH directories
+ * @head: a pointer to the first element 
+ */
 size_t print_folder(const list_t *head)
 {
 	size_t nodes = 0;
@@ -68,7 +76,7 @@ int main(void)
 	printf("%s\n", _getenv("PATH"));
 	path = _getenv("PATH");
 	folder = strtok(path, ":");
-	
+
 	while(folder != NULL)
 	{
 		new->str = folder;

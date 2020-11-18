@@ -53,7 +53,6 @@ char *_getenv(const char *name)
 		/*compare two strings*/
 		if (strcmp(name, value) == 0)
 		{
-			free(value);
 			return (strtok(NULL, "="));
 		}
 		free(environ_string);
@@ -102,4 +101,5 @@ int _setenv(const char *name, const char *value, int overwrite)
 void main()
 {
 	_setenv("HELLO", "HELLO WORLD", 1);
+	printf("%s\n",_getenv("HELLO"));
 }

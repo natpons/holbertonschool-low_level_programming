@@ -2,6 +2,11 @@
 #include <string.h>
 #include <stdlib.h>
 extern char **environ;
+/**
+ * _getenv - gets an environment variable
+ * ex:HOME=/home/vagrant, get value after =
+ * @name: name of the variable user enter
+ */
 
 char *_getenv(const char *name)
 {
@@ -30,7 +35,5 @@ char *_getenv(const char *name)
 int main(void)
 {
 	printf("%s \n", _getenv("HOME"));
-	/*printf("%s \n", _getenv("PATH"));
-	printf("%s \n", _getenv("ROOT"));*/
 	return(0);
 }

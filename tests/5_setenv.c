@@ -11,7 +11,10 @@ int _setenv(const char *name, const char *value, int overwrite);
 size_t print_folder(const list_t *head);
 extern char **environ;
 
-/*prints all elements of a linked list*/
+/**
+ * prints each directory contained in the env variable PATH
+ * one directory per line
+ */
 size_t print_folder(const list_t *head)
 {
 	size_t nodes = 0;
@@ -30,7 +33,11 @@ size_t print_folder(const list_t *head)
 	return (nodes);
 }
 
-/**********************************/
+/**
+ * _getenv - gets an environment variable
+ * ex:HOME=/home/vagrant, get value after =
+ * @name: name of the variable user enter
+ */
 char *_getenv(const char *name)
 {
 	char *environ_string;
@@ -55,26 +62,41 @@ char *_getenv(const char *name)
 	return (NULL);
 }
 
-/*****************  EX5 setenv ****************/
+/**
+ * _setenv - changes or adds an environment variable
+ * @name: the variable name
+ * @value: tha variable value
+ * @overwrite: value is changed if overwrite is nonzero
+ */
 int _setenv(const char *name, const char *value, int overwrite)
 {
 	char *set, *folder;
 	list_t *endnode, **head;
 	/*a new pointer temp which position we will advance to the last node*/
 	list_t *temp;
+	int i = 0;
+	char *newname;
+	// realloc                                                                                                  
 
+	newname = strdup(name);
 	set = _getenv(name);
-
 	if (set == NULL)
 	{
-		endnode = malloc(sizeof(list_t));
-		if (endnode == NULL)
-			return (0);
-		endnode->str = strdup(value);
-		endnode->next = NULL;
+		while(environ[i] != '\0')
+			i++;
+		environ[i] = strcat(newname, "=");
+		environ[i] = strcat(environ[i], value);
+		environ[i+1] = '\0';
+		i = 0;
+		while(environ[i] != '\0')
+		{
+			printf("ENVIRON after strcat = %s\n",environ[i]);
+			i++;
+		}
 	}
-	print_folder(endnode);
-	free(endnode->str);
+	else
+	{
+	}
 	return (0);
 }
 void main()

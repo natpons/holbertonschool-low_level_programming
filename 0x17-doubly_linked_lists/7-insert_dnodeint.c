@@ -10,7 +10,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head,
 		unsigned int idx, int n)
 {
 	unsigned int i = 0;
-	dlistint_t *temp, *hold, *newnode;
+	dlistint_t *temp, *newnode;
 
 	if (head == NULL)
 		return (0);
@@ -20,33 +20,34 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head,
 	newnode->n = n;
 	newnode->next = NULL;
 	newnode->prev = NULL;
+
+	temp = *head;
 	if (idx == 0)/*Add at the beginning*/
 	{
-		newnode->next = NULL;
+		newnode->next = temp;
+		temp->prev = newnode;
 		*head = newnode;
 		return (*head);
 	}
-	temp = *head;
-	while (temp != 0)/*Through the list till idx*/
+
+	while (i != (idx - 1))/*Through the list till idx-1*/
 	{
-		if (i == idx)
-		{
-			hold->next = newnode;
-			newnode->prev = hold;
-			newnode->next = temp;
-			return (newnode);
-		}
-		hold = temp; /*pointer to a previous node*/
-		temp = temp->next; /*pointer to the next node*/
+i	temp = temp->next;
 		i++;
+		if (temp == NULL)
+		{
+			free(newnode);
+			return(NULL);
+		}
 	}
-	if (i == idx)/*at the end*/
-	{
+	newnode->next = temp->next;
+	newnode->prev = temp;
+	if (!temp->next)
 		temp->next = newnode;
-		newnode->next = NULL;
-		newnode->prev = temp;
-		return (newnode);
+	else
+	{
+		temp->next->prev = newnode;
+		temp->next = newnode;
 	}
-	free(newnode);
-	return (NULL);
+	return (newnode);
 }

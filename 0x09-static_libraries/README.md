@@ -1,27 +1,28 @@
- 0x09. C - Static libraries
+# 0x09. C - Static libraries
 
 Foundations - Low-level programming & Algorithm  Hatching out
 
-_by Julien Barbier, co-founder & CEO at Holberton School
+_by Julien Barbier, co-founder & CEO at Holberton School_
 
-	_For this project, students are expected to look at this concept:_
+_For this project, students are expected to look at this concept:_
 
-	-   _[C static libraries](https://intranet.hbtn.io/concepts/61)_
+-   _[C static libraries](https://intranet.hbtn.io/concepts/61)_
 
 ## Resources
 
-	**Read or watch**:
+**Read or watch**:
 
-	-   [What Is A C Library? What Is It Good For?](https://intranet.hbtn.io/rltoken/PbeVzqesxDzZeETuXCHfJw "What Is A "C" Library? What Is It Good For?")
-	-   [Creating A Static C Library Using ar and ranlib](https://intranet.hbtn.io/rltoken/j4QblpmIVTZTABKGG5vUqQ "Creating A Static "C" Library Using "ar" and "ranlib"")
-	-   [Using A C Library In A Program](https://intranet.hbtn.io/rltoken/cmr8SwUbHBIRlaYY2fldGw "Using A "C" Library In A Program")
-	-   [What is difference between Dynamic and Static library(Static and Dynamic linking)](https://intranet.hbtn.io/rltoken/wC9HCOvJwa_Co1nZuL4QMA "What is difference between Dynamic and Static library(Static and Dynamic linking)")  (_stop at 4:44_)
+-   [What Is A C Library? What Is It Good For?](https://intranet.hbtn.io/rltoken/PbeVzqesxDzZeETuXCHfJw "What Is A "C" Library? What Is It Good For?")
+-   [Creating A Static C Library Using ar and ranlib](https://intranet.hbtn.io/rltoken/j4QblpmIVTZTABKGG5vUqQ "Creating A Static "C" Library Using "ar" and "ranlib"")
+-   [Using A C Library In A Program](https://intranet.hbtn.io/rltoken/cmr8SwUbHBIRlaYY2fldGw "Using A "C" Library In A Program")
+-   [What is difference between Dynamic and Static library(Static and Dynamic linking)](https://intranet.hbtn.io/rltoken/wC9HCOvJwa_Co1nZuL4QMA "What is difference between Dynamic and Static library(Static and Dynamic linking)")  (_stop at 4:44_)
 
-	**man or help**:
+**man or help**:
 
-	-   `ar`
-	-   `ranlib`
-	-   `nm`
+-   `ar`
+-   `ranlib`
+-   `nm`
+
 
 ## Learning Objectives
 

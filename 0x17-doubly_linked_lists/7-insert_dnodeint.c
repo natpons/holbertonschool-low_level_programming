@@ -20,12 +20,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head,
 	newnode->n = n;
 	newnode->next = NULL;
 	newnode->prev = NULL;
-	if (*head == NULL)
-	{
-		newnode->next = NULL;
-		*head = newnode;
-		return (*head);
-	}
 	temp = *head;
 	if (idx == 0)/*add at the beginning*/
 	{
@@ -34,7 +28,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head,
 		*head = newnode;
 		return (newnode);
 	}
-	while (i != (idx - 1))/*Through the list till idx-1*/
+	while (i != (idx - 1))/*add after idx-1*/
 	{
 		temp = temp->next;
 		i++;
@@ -44,11 +38,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head,
 			return (NULL);
 		}
 	}
-	newnode->next = temp->next;
+	newnode->next = temp->next;/*insert between*/
 	newnode->prev = temp;
-	if (!temp->next)
+	if (temp->next == NULL)
 		temp->next = newnode;
-	else
+	else/*if it is a node after newnode*/
 	{
 		temp->next->prev = newnode;
 		temp->next = newnode;

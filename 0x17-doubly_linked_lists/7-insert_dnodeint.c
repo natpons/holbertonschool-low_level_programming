@@ -26,7 +26,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head,
 		newnode->next = temp;
 		temp->prev = newnode;
 		*head = newnode;
-		return (*head);
+		return (newnode);
 	}
 	while (i != (idx - 1))/*Through the list till idx-1*/
 	{

@@ -9,7 +9,7 @@
 dlistint_t *insert_dnodeint_at_index(dlistint_t **head,
 		unsigned int idx, int n)
 {
-	size_t i = 0;
+	unsigned int  i = 0;
 	dlistint_t *temp, *newnode;
 
 	if (head == NULL)

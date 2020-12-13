@@ -1,16 +1,8 @@
-# 0x09. C - Static libraries
+ 0x09. C - Static libraries
 
 Foundations - Low-level programming & Algorithm  Hatching out
 
-_by Julien Barbier, co-founder & CEO at Holberton School_
-
-#### In a nutshell
-
--   **Manual QA review:**  11.5/12 mandatory
--   **Auto QA review:**  24.0/24 mandatory
--   **Altogether:**  **98.61%**
-    -   Mandatory: 98.61%
-        -   Optional: no optional tasks
+_by Julien Barbier, co-founder & CEO at Holberton School
 
 	_For this project, students are expected to look at this concept:_
 

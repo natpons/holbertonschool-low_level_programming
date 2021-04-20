@@ -12,19 +12,17 @@
  *
  * Return: the first index where value is located
  * If value is not present in array or if array is NULL :-1
- *
- * Use the square root of the size of the array as the jump step
- * Use the sqrt() function included in <math.h> ( with -lm)
  */
 int jump_search(int *array, size_t size, int value)
 {
-	int step, i, end_i, start_i;
+	size_t step, i, start_i, end_i;
 
 	if (array != NULL && size > 0)
 	{
 		i = 0;
 		step = sqrt(size);
 
+		printf("Value checked array[%lu] = [%lu]\n", i, i);
 		for (i = 0; i < step; i++)
 		{
 			if (value < array[step])
@@ -32,8 +30,10 @@ int jump_search(int *array, size_t size, int value)
 			else
 				start_i = step + 1;
 		}
+		printf("Value found between indexes [%lu] and [%lu]\n", start_i, end_i);
 		for (i = start_i; i <= end_i; i++)
 		{
+			printf("Value checked array[%lu] = [%lu]\n", i, i);
 			if (array[i] == value)
 				return (i);
 		}
